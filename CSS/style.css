@@ -19,6 +19,15 @@ header {
    height: 8vh;
 }
    
+#sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+#sec img{
+    width: 70px;
+}
+
 .NavBar img { 
     display: flex;
     flex-direction: column;
@@ -59,20 +68,25 @@ ul {
  list-style-type: none ;
  padding: 0%;
  transition: 1s;
+ 
 }
    
 li { 
-    width: 15%;
     text-align: center;
     transition: 0.5s;
     color: black;
+    
 }
    
 li:hover { 
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
 } 
+
+nav a{
+    text-decoration: none;
+}
+
 
 #welcome{
 height: 300px;
@@ -99,33 +113,88 @@ span{
     width: 100%;
     display: flex;
 }
-.articl{
+.article{
     display: flex;
     flex-direction: column;
     margin: 2px;
     width: 25%;
     height: 250px;
-    background-color:rgba(0, 0, 0, 0.63);
+    background-color:rgba(0, 0, 0, 0.596);
     font-family: 'Fruktur', cursive;
     transition: 0.5s;
     color: white;
 
 }
-.articl img{
+.article img{
     margin: 15px;
     width: 50px;
     height: 50px;
     color: white;
 }
 
-.articl button{
+.article span{
+    text-align: center;
+    font-size: 15px;
     margin-top: 5px;
     width: 150px;
-    border-radius: 5px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid #e5a00d;
+    color: #e5a00d;
+    
 }
 
-.articl:hover{
+.article:hover{
     background-color: rgba(255, 255, 255, 0.644);
     width: 30%;
     height: 300px;
+}
+
+.article  a{
+    text-decoration: none;
+}
+
+#WhyUS{
+margin-top: 30px;
+display: flex;
+}
+
+#WhyUS img{
+    width: 650px;
+}
+
+#articalWhyUS{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#articalWhyUS h1{
+    color: cornsilk;
+    font-size: 60px;
+    font-family: 'Fruktur', cursive;
+}
+#articalWhyUS p{
+    color: cornsilk;
+    font-size: 20px;
+    font-family: 'Fruktur', cursive;
+
+}
+footer nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(218, 165, 32, 0.37);
+}
+footer h4{
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 40px;
+    font-family: 'Fruktur', cursive;
+
+}
+
+#icons img{
+    margin: 25px;
+    width: 30px;
 }

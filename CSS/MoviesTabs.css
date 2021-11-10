@@ -61,17 +61,19 @@ ul {
 }
 
 li { 
-    width: 15%;
     text-align: center;
     transition: 0.5s;
     color: black;
 }
 
 li:hover { 
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
 } 
+
+nav a{
+    text-decoration: none;
+}
    
 
 h1{

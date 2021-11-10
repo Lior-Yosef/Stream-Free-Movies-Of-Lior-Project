@@ -19,8 +19,6 @@ getAllMovies(URLMovies)
 function showInfo(arrayInfo) {
     for (const items of arrayInfo.data) {
         tableMovies.innerHTML += `
-       
-
         <tr>
          <td> ${items.movieName}  </td>
          <td> ${items.image} </td>

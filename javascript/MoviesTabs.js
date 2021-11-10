@@ -19,28 +19,27 @@ getAllMovies(URLMovies)
         for (const items of arrayInfo.data) {
             card.innerHTML +=
             `<div class = "tabs">
-            <h1>${items.movieName} </h1> 
+            <h1>${items.movieName}</h1>
             <img src="${items.image}"> 
             <p>Rating: ${items.rating} </p>
-             <a href="" target="_blank"> <button> Go to Movie</button> </a> 
-
-              </div>
+            <a href="./data.html?id=${items._id}" target="_blank"> <button> Go to Movie</button> </a> 
+            </div>
         `
         }
     }
 
-    switch (select.value) {
-        case "movieName":
+    // switch (select.value) {
+    //     case "movieName":
             
-            break;
+    //         break;
 
-            case "rating":
+    //         case "rating":
             
-            break;
+    //         break;
 
-            case "date":
+    //         case "date":
             
-            break;
-        default:
-            break;
-    }
+    //         break;
+    //     default:
+    //         break;
+    // }
