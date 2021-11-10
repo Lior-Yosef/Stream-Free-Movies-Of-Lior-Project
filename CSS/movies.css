@@ -91,6 +91,7 @@ table, th, td {
     text-align: center;
     transition: 0.2s;
     width: 100vw;
+    overflow-wrap: break-word;
   }
 
   td{

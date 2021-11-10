@@ -75,3 +75,16 @@ li:hover {
 nav a{
     text-decoration: none;
 }
+
+#card{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card h1 ,h3{
+    text-align: center;
+    font-family: 'Fruktur', cursive;
+    color: blanchedalmond;
+}

@@ -23,11 +23,25 @@ getAllMovies(URLMovies)
             <img src="${items.image}"> 
             <p>Rating: ${items.rating} </p>
             <a href="./data.html?id=${items._id}" target="_blank"> <button> Go to Movie</button> </a> 
+            <button type="button" onclick = ${deleteMovie(items._id)}> Delete Movie</button>  
+
             </div>
         `
         }
     }
 
+    async function deleteMovie(id) {
+        let options = {
+            method : `DELETE`
+        }
+
+        try {
+            return await fetch (`https://moviesmern.herokuapp.com/movies /movie/:${id}`,options)
+            .then(response => response.json())
+        } catch (error) {
+            return error
+        }
+    }
     // switch (select.value) {
     //     case "movieName":
             
