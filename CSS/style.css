@@ -10,15 +10,7 @@ body {
     position: relative; 
     padding: 0%;
 }
- 
-/* header {  */
-   /* background-color:rgb(57, 57, 236); */
-   /* display: flex;
-   justify-content: space-between;
-   width: 100%;
-   height: 8vh; */
-/* } */
-   
+
 .sec{
     display: flex;
     justify-content: space-between;
@@ -45,8 +37,6 @@ nav {
    
 ul { 
  align-items: center;
- /* height: 8vh; */
- /* background-color:rgba(255, 255, 255, 0.521); */
  font-family: 'Suez One', serif;
  font-size: 30px;
  display: flex;
@@ -63,7 +53,6 @@ li {
 }
    
 li:hover { 
-    /* background-color: rgba(0, 0, 0, 0.26); */
     border-radius: 10px;
     text-shadow: 2px 2px 5px goldenrod;
     border-top: solid 3px black;
@@ -170,6 +159,7 @@ display: flex;
     font-family: 'Fruktur', cursive;
 
 }
+
 footer nav{
     display: flex;
     flex-direction: column;

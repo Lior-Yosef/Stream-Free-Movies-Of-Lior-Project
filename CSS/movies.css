@@ -9,66 +9,61 @@
        position: relative; 
        padding: 0%;
    }
-   
+/*    
   header { 
      background-color:rgb(57, 57, 236);
      display: flex;
      justify-content: space-between;
      width: 100%;
      height: 8vh;
-  }
+  } */
 
-  .NavBar img { 
-      display: flex;
-      flex-direction: column;
-      width: 70px;
-      height: 8vh;
-      transition: 0.5s;
-      margin-right: 4px;
-  }
-  .NavBar img:hover { 
-      width: 80px;
-      height: 50px;
-  }
-  .NavImg img { 
+  .sec{
     display: flex;
-    flex-direction: column;
-    width: 70px;
-    height: 8vh;
-    transition: 0.5s;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.596);
 }
-.NavImg img:hover { 
-    width: 80px;
+.sec a{
+    text-decoration: none;
+}
+
+.sec img{
+    width: 100px;
     height: 50px;
+    transition: 1s;
+
+}
+.sec img:hover { 
+    width: 110px;
+    height: 70px;
 }
 
 nav { 
-   width: 100%;
+ width: 100%;
 }
-
+   
 ul { 
-   align-items: center;
-   height: 8vh;
-   background-color:rgb(57, 57, 236);
-   font-family: 'Suez One', serif;
-   font-size: 20px;
-   font-weight: bold 700px;
-   display: flex;
-   justify-content: space-around;
-   list-style-type: none ;
-   padding: 0%;
-   transition: 1s;
+ align-items: center;
+ font-family: 'Suez One', serif;
+ font-size: 30px;
+ display: flex;
+ justify-content: space-around;
+ list-style-type: none ;
+ transition: 1s;
 }
-
+   
 li { 
     text-align: center;
     transition: 0.5s;
-    color: black;
+    color: rgb(255, 255, 255);
+    
 }
-
+   
 li:hover { 
-    background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
+    text-shadow: 2px 2px 5px goldenrod;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black ;
 } 
 
 nav a{
@@ -102,3 +97,23 @@ th, td:hover {
     background-color: rgba(0, 0, 0, 0.26);
     border-radius: 10px;
 } 
+
+
+footer nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(218, 165, 32, 0.37);
+}
+footer h4{
+    text-align: center;
+    color: blanchedalmond;
+    font-size: 40px;
+    font-family: 'Fruktur', cursive;
+
+}
+
+.icons img{
+    margin: 15px;
+    width: 50px;
+}
