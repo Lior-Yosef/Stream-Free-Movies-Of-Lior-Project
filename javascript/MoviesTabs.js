@@ -163,15 +163,15 @@ btn.onclick = () => {
 // }
 
 
-// const basicAPI = "https://moviesmern.herokuapp.com/movies";
+const basicAPI = "https://moviesmern.herokuapp.com/movies";
 
 
 
-// btn.onclick = () => {
-//     card.innerHTML=" "
-//     getAllMovies(`${basicAPI}/movie/searchByName/${search.value}`)
-//    .then (res => showInfo(res.data))
+btnSearch.onclick = () => {
+    card.innerHTML=" "
+    getAllMovies(`${basicAPI}/movie/searchByName/${search.value}`)
+   .then (res => showInfo(res.data))
 
-// }
+}
 
 
