@@ -23,7 +23,7 @@ const URLMovies = "https://moviesmern.herokuapp.com/movies/all";
 //             <img src="${items.image}"> 
 //             <p>Rating: ${items.rating} </p>
 //             <a href="./data.html?id=${items._id}" target="_blank"> <button> Go to Movie</button> </a> 
-             
+
 
 //             </div>
 //         `
@@ -41,85 +41,90 @@ async function getAllMovies(api) {
 }
 
 getAllMovies(URLMovies)
-    .then ((success)=>{showInfo(success.data)})
+    .then((success) => { showInfo(success.data) })
     .catch((rej) => { console.log(rej) })
 
 
-    function showInfo(arrayInfo) {
-        for (const items of arrayInfo) {
-            card.innerHTML +=
+function showInfo(arrayInfo) {
+    for (const items of arrayInfo) {
+        card.innerHTML +=
             `<div class = "tabs">
             <h1>${items.movieName}</h1>
             <img src="${items.image}"> 
             <p>Rating: ${items.rating} </p>
             <a href="./data.html?id=${items._id}" target="_blank"> <button> Go to Movie</button> </a> 
-             
+            <button type="button" onclick= Delete("${items._id}")> remove </button>
 
             </div>
         `
-        }
     }
+}
 
-    // <button type="button" onclick = ${deleteMovie(items._id)}> Delete Movie</button> 
 
-    // async function deleteMovie(id) {
-    //     let options = {
-    //         method : `DELETE`
-    //     }
 
-    //     try {
-    //         return await fetch (`https://moviesmern.herokuapp.com/movies/movie/:${id}`,options)
-    //         .then(response => response.json())
-    //     } catch (error) {
-    //         return error
-    //     }
-    // }
-    
-
-    function sortByRating(obj) {
-        obj.sort((a,b)=> {return a.rating - b.rating});
-        return showInfo(obj)
+async function deleteMovie(id,options) {
+    try {
+        return await fetch(`https://moviesmern.herokuapp.com/movies/movie/${id}`, options)
+            .then(response => response.json())
+    } catch (error) {
+        return error
     }
+}
 
-
-    function sortByDate(object) {
-        object.sort((a,b)=> {return b.data - a.data});
-        return showInfo(object)
+function Delete(id) {
+    let options = {
+        method: `DELETE`
     }
-    
+    deleteMovie(id,options)
+    .then(res=>console.log(res))
 
-btn.onclick=()=>{
+}
+
+
+function sortByRating(obj) {
+    obj.sort((a, b) => { return a.rating - b.rating });
+    return showInfo(obj)
+}
+
+
+function sortByDate(object) {
+    object.sort((a, b) => { return b.date - a.date });
+    return showInfo(object)
+}
+
+
+btn.onclick = () => {
     switch (select.value) {
-     
+
         case "rating":
-            card.innerHTML=""
-            let GetSortByRating = async ()=>{
+            card.innerHTML = ""
+            let GetSortByRating = async () => {
                 try {
                     return await fetch(URLMovies)
-                    .then( res => res.json())
+                        .then(res => res.json())
                 } catch (error) {
                     return error
                 }
             }
             GetSortByRating()
-            .then ( res => sortByRating(res.data) )
-            .catch((rej) => { console.log(rej) })
+                .then(res => sortByRating(res.data))
+                .catch((rej) => { console.log(rej) })
             break;
 
         case "date":
-            card.innerHTML=""
-            let GetSortByDate = async ()=>{
+            card.innerHTML = ""
+            let GetSortByDate = async () => {
                 try {
                     return await fetch(URLMovies)
-                    .then( res => res.json())
+                        .then(res => res.json())
                 } catch (error) {
                     return error
                 }
             }
             GetSortByDate()
-            .then ( res => sortByDate(res.data) )
-            .catch((rej) => { console.log(rej) })
-        
+                .then(res => sortByDate(res.data))
+                .catch((rej) => { console.log(rej) })
+
         default:
             break;
     }
@@ -158,9 +163,15 @@ btn.onclick=()=>{
 // }
 
 
+// const basicAPI = "https://moviesmern.herokuapp.com/movies";
 
 
 
+// btn.onclick = () => {
+//     card.innerHTML=" "
+//     getAllMovies(`${basicAPI}/movie/searchByName/${search.value}`)
+//    .then (res => showInfo(res.data))
 
+// }
 
 

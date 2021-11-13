@@ -10,13 +10,6 @@
        padding: 0%;
    }
    
-  /* header { 
-     background-color:rgb(57, 57, 236);
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
-     height: 8vh;
-  } */
 
 .sec{
   display: flex;
@@ -111,6 +104,25 @@ span{
 .tabs img{
     width: 250px;
     height: 350px;
+}
+
+#select{
+    width: 100px;
+    height: 30px;
+    transition: 0.5s;
+}
+#select:hover{
+    background-color: goldenrod;
+}
+
+#btn{
+    width: 100px;
+    height: 30px;
+    transition: 0.5s;
+}
+
+#btn:hover{
+    background-color: goldenrod;
 }
 
 

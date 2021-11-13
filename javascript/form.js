@@ -26,13 +26,11 @@ async function saveData(api, OPTIONS) {
 }
 
 btn.onclick = () => {
-
-    let newMovie = new addMovies(movieName.value, image.value, Rating.value, linkToMovie.value, synopsis.value);
-
-    const OPTIONS = {
+ let movie = new addMovies(movieName.value, image.value, Rating.value, linkToMovie.value, synopsis.value);
+  let OPTIONS = {
         method: `POST`,
-        body: JSON.stringify({ newMovie }),
-        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({newMovie}),
+        headers:{ 'Content-Type': 'application/json' }
     }
 
     saveData("https://moviesmern.herokuapp.com/movies/saveMovie", OPTIONS)
