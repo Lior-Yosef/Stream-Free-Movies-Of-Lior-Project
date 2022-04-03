@@ -54,7 +54,6 @@ function showInfo(arrayInfo) {
             <p>Rating: ${items.rating} </p>
             <a href="./data.html?id=${items._id}" target="_blank"> <button> Go to Movie</button> </a> 
             <button type="button" onclick= Delete("${items._id}")> remove </button>
-
             </div>
         `
     }

@@ -8,7 +8,7 @@ async function getData(id) {
     } catch (error) {
       return error;
     }
-  }
+  }  
   let movieId = location.search.substr(4);
   getData(movieId).then((movie) => {
     title.innerHTML = `
@@ -17,6 +17,7 @@ async function getData(id) {
     <h1>${movie.data.movieName} </h1>
     <h3>${movie.data.synopsis} </h3>
     <h3>${movie.data.rating}</h3>
+    <p> Done </p>
       </div>
      `;
   });
